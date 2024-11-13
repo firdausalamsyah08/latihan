@@ -1,0 +1,50 @@
+@startuml jadwal 
+title Flowchart for Class Scheduling Application with Enhanced Login Validation
+
+start
+
+:Open Application;
+
+if (User Type) then (Admin)
+    :Admin Login;
+    if (Credentials Valid?) then (Yes)
+        :Go to Schedule Management;
+
+        if (Choose Action) then (Add Schedule)
+            :Enter Schedule Details;
+            :Save Schedule;
+        else if (Edit Schedule)
+            :Select Schedule to Edit;
+            :Update Details;
+            :Save Changes;
+        else if (Delete Schedule)
+            :Select Schedule to Delete;
+            :Confirm Deletion;
+        endif
+
+        :Logout;
+    else (No)
+        :Display "Invalid Credentials";
+        :Return to Login Page;
+    endif
+
+else (Student)
+    :Student Login;
+    :Input email and password;
+    if (Credentials Valid?) then (Yes)
+        :Access Schedule View;
+
+        if (Select Schedule Detail) then
+            :View Details (Date, Time, Duration, Course, Session, Lecturer, Location);
+        endif
+
+        :Close Schedule View;
+    else (No)
+        :Display "Invalid Credentials";
+        :Return to Login Page;
+    endif
+
+endif
+
+stop
+@enduml

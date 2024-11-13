@@ -1,0 +1,2 @@
+# tujuan aplikasi
+aplikasi ini dirancang untuk memudahkan mahasiswa dalam melihat jadwal kuliah mereka selama satu minggu kedepan serta mempermudah admin atau bagian akademik dalam mengatur jadwal perkuliahan mingguan. fitur utama mencakup tampilan dan pengaturan jadwal dengan detail yang meliputi mata kuliah, waktu, dosen, dan lokasi kelas
